@@ -6,8 +6,8 @@ import psycopg2
 from amukhsimov_jupyter_templates_bigdata import encode_text, decode_text
 #from delta import *
 
-load_dotenv(os.join(JUPYTER_DIR, 'env', '.env'))
-load_dotenv(os.join(JUPYTER_DIR, 'env', 'creds.env'))
+load_dotenv(os.path.join(JUPYTER_DIR, 'env', '.env'))
+load_dotenv(os.path.join(JUPYTER_DIR, 'env', 'creds.env'))
 
 FC_TEST_IP = os.getenv("FC_TEST_IP", None)
 FC_TEST_PORT = os.getenv("FC_TEST_PORT", None)

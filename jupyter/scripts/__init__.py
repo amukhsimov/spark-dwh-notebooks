@@ -27,10 +27,10 @@ pd.set_option('display.float_format', lambda x: f'{x:,.2f}')
 mynameis = input("Input your login: ")
 master_password = input("Input master password: ")
 
-if os.path.isfile(os.join(JUPYTER_DIR, mynameis, '__init__.py')):
-    execfile(os.join(JUPYTER_DIR, mynameis, '__init__.py'))
+if os.path.isfile(os.path.join(JUPYTER_DIR, mynameis, '__init__.py')):
+    execfile(os.path.join(JUPYTER_DIR, mynameis, '__init__.py'))
 
-execfile(os.join(JUPYTER_DIR, mynameis, 'scripts', '__environment__.py'), globals(), locals())
-execfile(os.join(JUPYTER_DIR, mynameis, 'scripts', '__functions__.py'), globals(), locals())
+execfile(os.path.join(JUPYTER_DIR, 'scripts', '__environment__.py'), globals(), locals())
+execfile(os.path.join(JUPYTER_DIR, 'scripts', '__functions__.py'), globals(), locals())
 clear_output()
 # execfile("/jupyter/scripts/__data__.py", globals(), locals())
